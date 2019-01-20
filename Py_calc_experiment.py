@@ -1,8 +1,10 @@
 from tkinter import*
+import pdb
 
 def btnClick(numbers):
     global operator
     operator = operator + str(numbers)
+    operator = operator.lstrip('0')
     text_Input.set(operator)
 
 def btnClear():
@@ -12,9 +14,12 @@ def btnClear():
 
 def btnEqual():
     global operator
+    if operator == '':
+        operator = '0'
     sumup = str(eval(operator))
     text_Input.set(sumup)
-    operator=""
+    operator=str(sumup)
+
     
 cal = Tk()
 cal.title("Calculator")
