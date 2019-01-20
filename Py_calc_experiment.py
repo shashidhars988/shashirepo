@@ -23,7 +23,7 @@ text_Input = StringVar()
 
 txtDisplay = Entry(cal,font=('TimesNewRoman', 15), textvariable=text_Input,
                    bd = 10, insertwidth=4,
-                   bg="white", justify='right').grid(columnspan=4)
+                   bg="grey", justify='right').grid(columnspan=4)
 
 bt7 = Button(cal,padx=16,bd=4, fg="black",font=('TimesNewRoman', 15),
              text="7",command=lambda:btnClick(7)).grid(row=1,column=0)
